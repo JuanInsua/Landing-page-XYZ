@@ -22,7 +22,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Estilos para la imagen del logo */
 .logo img {
     height: 100px;
@@ -36,7 +35,6 @@ nav {
 }
 
 /* Estilos para los enlaces de navegación */
-
 nav a {
     font-weight: 600;
     color: white; /* Texto blanco */
@@ -48,17 +46,6 @@ nav a {
 nav a:hover {
     background-color: #F39C12; /* Naranja */
     color: white;
-}
-
-/* Estilos para el botón de llamada a la acción */
-.cta-button {
-    background-color: #F39C12; /* Naranja */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
 }
 
 /* Estilos para el botón de llamada a la acción al pasar el ratón */
@@ -96,10 +83,9 @@ footer {
 
 /* TUTORIAS ESPECIALIZADAS */
 .tutorias-section {
-    background-color: #F9EBEA;
+    background-color: #a4fff7;
     padding: 40px;
     text-align: center;
-    border-radius: 10px; /* Agregamos bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
 }
 
@@ -125,6 +111,6 @@ footer {
 }
 
 .tutorias-imagen {
-    width: 354px;
-    height: 200px;
+    max-width: 30%; /* Ancho máximo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
 }
