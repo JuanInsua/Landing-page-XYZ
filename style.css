@@ -1,6 +1,6 @@
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', monospace;
     margin: 0;
     background-color: #2980B9; /* Fondo azul claro */
     color: #000; /* Texto gris oscuro */
@@ -83,7 +83,7 @@ footer {
 
 /* TUTORIAS ESPECIALIZADAS */
 .tutorias-section {
-    background-color: #a4fff7;
+    background-color: #ffe5ec;
     padding: 40px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
