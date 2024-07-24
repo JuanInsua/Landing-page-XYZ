@@ -27,7 +27,6 @@ header {
     height: 100px;
     max-width: 400px;
 }
-
 /* Estilos para la navegación */
 nav {
     display: flex;
@@ -113,4 +112,63 @@ footer {
 .tutorias-imagen {
     max-width: 30%; /* Ancho máximo para las imágenes */
     height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* RECURSOS EDUCATIVOS AVANZADOS */
+/* Estilos para la sección de Recursos Educativos Avanzados */
+.recursos-section {
+    background-color: #ffe5ec; /* Color de fondo beige claro */
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+}
+
+.recursos-section h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000; /* Texto gris oscuro */
+    margin-bottom: 20px;
+}
+
+.recursos-section p {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #555; /* Texto gris medio */
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.recurso {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recurso img {
+    max-width: 100%;
+    height: 70%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.recurso h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #222; /* Texto negro */
+    margin-bottom: 10px;
+}
+
+.recurso p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #444; /* Texto gris medio */
 }
