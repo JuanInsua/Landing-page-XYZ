@@ -1,9 +1,21 @@
+                                                                            /*HEADER*/
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: 'Roboto', monospace;
-    margin: 0;
-    background-color: #2980B9; /* Fondo azul claro */
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: #ffe5ec; /* Fondo azul claro */
     color: #000; /* Texto gris oscuro */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Estilos para los enlaces */
@@ -18,7 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
-    background-color: #1A5276; /* Azul oscuro */
+    background-color: #534d4d; /* Azul oscuro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,7 +92,9 @@ footer {
     }
 }
 
-/* TUTORIAS ESPECIALIZADAS */
+
+                                                                /* TUTORIAS ESPECIALIZADAS */
+
 .tutorias-section {
     background-color: #ffe5ec;
     padding: 40px;
@@ -114,13 +128,27 @@ footer {
     height: auto; /* Altura automática para mantener la proporción */
 }
 
-/* RECURSOS EDUCATIVOS AVANZADOS */
-/* Estilos para la sección de Recursos Educativos Avanzados */
-.recursos-section {
-    background-color: #ffe5ec; /* Color de fondo beige claro */
-    padding: 40px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+
+                                                            /* RECURSOS EDUCATIVOS AVANZADOS */
+
+.recursos-section h2 {
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+color: #000000;
+margin-bottom: 20px;
+text-align: center;
+}
+
+/*Estilos para los párrafos dentro de la sección*/
+.recursos-section p {
+font-style: normal;
+font-size: 20px;
+font-weight: 400;
+line-height: 32px;
+color: #000000;
+text-align: center;
 }
 
 .recursos-section h2 {
@@ -128,47 +156,79 @@ footer {
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
-    color: #000000; /* Texto gris oscuro */
+    color: #000000;
     margin-bottom: 20px;
 }
 
+/*Estilos para los párrafos dentro de la sección*/
 .recursos-section p {
     font-style: normal;
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
-    color: #555; /* Texto gris medio */
+    color: #000000;
 }
 
-.recursos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+
+.container{
+  width: 100%;
+  display: flex;
+  max-width: 1550px;
+  margin: auto;
 }
 
-.recurso {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    
 }
 
-.recurso img {
-    max-width: 100%;
-    height: 70%;
-    margin-bottom: 40px;
-    border-radius: 10px;
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+
 }
 
-.recurso h3 {
-    font-size: 20px;
+.card img{
+    width: 100%;
+    height: 210%;
+    
+}
+
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+
+}
+
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card .contenido h3{
     font-weight: 500;
-    color: #222; /* Texto negro */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.recurso p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #444; /* Texto gris medio */
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover{
+    background: #2fb4cc;
+    color: #fff;
 }
