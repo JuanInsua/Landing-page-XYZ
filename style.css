@@ -1,21 +1,24 @@
-                                                                            /*HEADER*/
-*{
-    margin: 0;
-    padding: 0%;
+* {
     box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Corregido 'monospace' a 'sans-serif' para una mejor correspondencia */
 }
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: 'Roboto', monospace;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    background-color: #ffe5ec; /* Fondo azul claro */
-    color: #000; /* Texto gris oscuro */
-    justify-content: center;
+    background-color: #ffe5ec; /* Fondo rosa pastel */
+    color: #000; /* Color de texto por defecto */
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #646464; /* Gris oscuro */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para los enlaces */
@@ -24,50 +27,34 @@ a {
     color: black;
 }
 
-/* Estilos para el encabezado */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 40px;
-    background-color: #534d4d; /* Azul oscuro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Estilos para la imagen del logo */
 .logo img {
-    height: 100px;
-    max-width: 400px;
+    height: 90px;
+    width: auto;
 }
-/* Estilos para la navegación */
+
 nav {
     display: flex;
     gap: 20px;
 }
 
-/* Estilos para los enlaces de navegación */
 nav a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
     font-weight: 600;
-    color: white; /* Texto blanco */
     padding: 10px 15px;
     border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave para hover */
 }
 
-/* Estilos para los enlaces de navegación al pasar el ratón */
 nav a:hover {
     background-color: #F39C12; /* Naranja */
-    color: white;
 }
 
-/* Estilos para el botón de llamada a la acción al pasar el ratón */
-.cta-button:hover {
-    background-color: #e67e22; /* Naranja más oscuro */
-}
-
-/* Estilos para el pie de página */
+/* PIE DE PÁGINA */
 footer {
     background-color: #1A5276; /* Azul oscuro */
-    color: white;
+    color: #fff;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -75,160 +62,242 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-                                                                /* TUTORIAS ESPECIALIZADAS */
-
+/* SECCIÓN DE TUTORÍAS ESPECIALIZADAS */
 .tutorias-section {
-    background-color: #ffe5ec;
     padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
 }
 
 .tutorias-section h2 {
-    font-style: normal;
+    font-size: 2.7em; /* Tamaño de fuente consistente con h2 global */
     font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: -1px;
     color: #000;
-    margin-bottom: 20px; /* Espacio inferior para separar del párrafo */
+    margin-bottom: 10px;
 }
 
 .tutorias-section p {
-    font-style: normal;
-    font-size: 20px;
+    font-size: 1.25em; /* Tamaño de fuente consistente con p global */
     font-weight: 400;
-    line-height: 32px;
-    text-align: center;
     color: #000;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tutorias-imagenes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .tutorias-imagen {
     max-width: 30%; /* Ancho máximo para las imágenes */
-    height: auto; /* Altura automática para mantener la proporción */
+    height: auto; /* Mantiene la proporción */
+    flex-wrap: wrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorias-imagen:hover {
+    transform: scale(1.05);
 }
 
 
-                                                            /* RECURSOS EDUCATIVOS AVANZADOS */
 
-.recursos-section h2 {
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 40px;
-color: #000000;
-margin-bottom: 20px;
-text-align: center;
-}
 
-/*Estilos para los párrafos dentro de la sección*/
-.recursos-section p {
-font-style: normal;
-font-size: 20px;
-font-weight: 400;
-line-height: 32px;
-color: #000000;
-text-align: center;
-}
 
-.recursos-section h2 {
-    font-style: normal;
+/* RECURSOS EDUCATIVOS AVANZADOS */
+.recursos-section h2{
+    text-align: center;
+    font-size: 2.7em; /* Tamaño de fuente consistente con h2 global */
     font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    color: #000000;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.recursos-section p {
+    text-align: center; /* Centra el texto en el párrafo */
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #000;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-/*Estilos para los párrafos dentro de la sección*/
-.recursos-section p {
-    font-style: normal;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-    color: #000000;
-}
-
-
-.container{
-  width: 100%;
-  display: flex;
-  max-width: 1550px;
-  margin: auto;
-}
-
-.card{
+.recursos-section .container {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Agrega flex-wrap para mejor responsividad */
+    justify-content: center; /* Centrar tarjetas en contenedor */
+    max-width: 1300px;
+    margin: auto;
+}
+
+.recursos-section .card {
+    width: calc(33.33% - 40px); /* Ajuste para tres columnas con espacio */
     margin: 20px;
     border-radius: 6px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    transition: all 400ms ease;
-    
+    transition: all 0.4s ease-out;
+    cursor: pointer; /* Cambiar a pointer para indicar interactividad */
 }
 
-.card:hover{
+.recursos-section .card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
-
 }
 
-.card img{
+.recursos-section .card img {
     width: 100%;
-    height: 210%;
-    
+    height: 210px;
+    object-fit: cover; /* Mejor ajuste de imagen */
 }
 
-.card .contenido{
+.recursos-section .card .contenido {
     padding: 15px;
     text-align: center;
-
 }
 
-.card .contenido p{
-    line-height: 1.5;
-    color: #6a6a6a;
-}
-
-.card .contenido h3{
-    font-weight: 500;
+.recursos-section .card .contenido h3 {
     margin-bottom: 15px;
+    color: #000000;
 }
 
-.card .contenido a{
-    text-decoration: none;
+.recursos-section .card .contenido p {
+    line-height: 1.8;
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 10px; /* Ajuste del margen inferior */
+}
+
+.recursos-section .card .contenido a {
     display: inline-block;
-    padding: 10px;
+    padding: 10px 20px; /* Ampliación del padding para mejor clicabilidad */
     margin-top: 10px;
+    text-decoration: none;
     color: #2fb4cc;
     border: 1px solid #2fb4cc;
     border-radius: 4px;
-    transition: all 400ms ease;
+    transition: all 0.4s ease;
 }
 
-.card .contenido a:hover{
+.recursos-section .card .contenido a:hover {
     background: #2fb4cc;
     color: #fff;
+}
+
+
+
+
+
+
+/* APRENDIZAJE PERSONALIZADO */
+.programas-section {
+    display: flex;
+    flex-direction: column; /* Para que el título esté arriba */
+    align-items: center; /* Centra el contenido */
+}
+
+
+.programas-section h2{
+    font-size: 2em;
+    font-weight: 350;
+    color: #000;
+    margin: 20px 0; /* Espacio arriba y abajo del título */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.programas-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 50px;
+}
+
+.programas-section .card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.programas-section .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 1s;
+}
+
+.programas-section .card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.programas-section .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.programas-section .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.programas-section .card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #778899;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.programas-section .card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.programas-section .card .back .link a {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.programas-section .card .back .link a:hover {
+    color: #f39c12;
+}
+
+.programas-section .card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.programas-section .card .back p {
+    letter-spacing: 1px;
+}
+
+.programas-section .card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.programas-section .card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
 }
