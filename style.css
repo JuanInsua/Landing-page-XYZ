@@ -1,3 +1,395 @@
-p{
-    color: red;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Corregido 'monospace' a 'sans-serif' para una mejor correspondencia */
 }
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    background-color: #ffe5ec; /* Fondo rosa pastel */
+    color: #000; /* Color de texto por defecto */
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #646464; /* Gris oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos para la imagen del logo */
+.logo img {
+    height: 90px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+nav a:hover {
+    background-color: #F39C12; /* Naranja */
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1A5276; /* Azul oscuro */
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* SECCIÓN DE TUTORÍAS ESPECIALIZADAS */
+.tutorias-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.tutorias-section h2 {
+    font-size: 2.7em; /* Tamaño de fuente consistente con h2 global */
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.tutorias-section p {
+    font-size: 1.25em; /* Tamaño de fuente consistente con p global */
+    font-weight: 400;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tutorias-imagenes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.tutorias-imagen {
+    max-width: 30%; /* Ancho máximo para las imágenes */
+    height: auto; /* Mantiene la proporción */
+    flex-wrap: wrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorias-imagen:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* RECURSOS EDUCATIVOS AVANZADOS */
+.recursos-section h2{
+    text-align: center;
+    font-size: 2.7em; /* Tamaño de fuente consistente con h2 global */
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.recursos-section p {
+    text-align: center; /* Centra el texto en el párrafo */
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.recursos-section .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Agrega flex-wrap para mejor responsividad */
+    justify-content: center; /* Centrar tarjetas en contenedor */
+    max-width: 1300px;
+    margin: auto;
+}
+
+.recursos-section .card {
+    width: calc(33.33% - 40px); /* Ajuste para tres columnas con espacio */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-out;
+    cursor: pointer; /* Cambiar a pointer para indicar interactividad */
+}
+
+.recursos-section .card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.recursos-section .card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover; /* Mejor ajuste de imagen */
+}
+
+.recursos-section .card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.recursos-section .card .contenido h3 {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.recursos-section .card .contenido p {
+    line-height: 1.8;
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 10px; /* Ajuste del margen inferior */
+}
+
+.recursos-section .card .contenido a {
+    display: inline-block;
+    padding: 10px 20px; /* Ampliación del padding para mejor clicabilidad */
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.recursos-section .card .contenido a:hover {
+    background: #2fb4cc;
+    color: #fff;
+}
+
+
+
+
+
+
+/* APRENDIZAJE PERSONALIZADO */
+.programas-section {
+    display: flex;
+    flex-direction: column; /* Para que el título esté arriba */
+    align-items: center; /* Centra el contenido */
+}
+
+
+.programas-section h2{
+    font-size: 2em;
+    font-weight: 350;
+    color: #000;
+    margin: 20px 0; /* Espacio arriba y abajo del título */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.programas-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 50px;
+}
+
+.programas-section .card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.programas-section .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 1s;
+}
+
+.programas-section .card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.programas-section .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.programas-section .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.programas-section .card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #778899;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.programas-section .card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.programas-section .card .back .link a {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.programas-section .card .back .link a:hover {
+    color: #f39c12;
+}
+
+.programas-section .card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.programas-section .card .back p {
+    letter-spacing: 1px;
+}
+
+.programas-section .card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.programas-section .card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+.footer {
+    background-color: #1a5276;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .footer .section {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ffffff;
+  }
+  
+  .footer .cta-button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .footer .cta-button:hover {
+    background-color: #d98208;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  } 
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  
+  .social-icon:hover {
+    color: #f39c12;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-item: center;
+      gap: 20px;
+    }
+  
+    .footer .section {
+      max-width: 100%;
+    }
+  }
