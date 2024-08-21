@@ -41,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0px 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky; /* Hace que el header sea "pegajoso" */
   top: 0; /* Posiciona el header en la parte superior */
@@ -79,6 +79,7 @@ nav a {
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s; /* Transición suave para hover */
+  font-size: 1.05em;
 }
 
 nav a:hover {
@@ -453,8 +454,8 @@ footer {
 
 /*LANDING PAGE RESPONSIVE */
 
-/* Mobile Small - 360x640 */
-@media (max-width: 360px) {
+/* Mobile Small to Medium - 360px to 375px */
+@media (max-width: 375px) {
   header {
     flex-direction: column;
     padding: 10px;
@@ -478,6 +479,33 @@ footer {
   .programas-section .card {
     max-width: 100%;
     margin: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer .section {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .social-media {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 15px 20px;
+    align-items: center;
+    text-align: center;
   }
 }
 
