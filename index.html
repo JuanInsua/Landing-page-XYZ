@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <link rel="icon" href="imagenes/Icono XYZ CORP.png" type="image/png">
+<head>
+    <link rel="icon" href="imagenes/Icono XYZ CORP.png" type="image/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XYZ WebSite</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="logo">
-        <a href="http://127.0.0.1:5500/index.html#programas">
-          <img src="imagenes/Logo XYZ CORP.png" alt="Logo de la compañía" />
-        </a>
-      </div>
-      <nav>
-        <a href="#inicio" class="nav-link">Inicio</a>
-        <a href="#programas" class="nav-link">Programas</a>
-        <a href="#acerca" class="nav-link">Acerca de</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-      </nav>
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/index.html#programas">
+                <img src="imagenes/Logo XYZ CORP.png" alt="Logo de la compañía" />
+            </a>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </label>
+        <nav>
+          <ul class="menu">
+            <li><a href="#tutorias-section" onclick="document.getElementById('menu-toggle').checked = false;">Tutorías</a></li>
+            <li><a href="#recursos-section" onclick="document.getElementById('menu-toggle').checked = false;">Recursos</a></li>
+            <li><a href="#programas-section" onclick="document.getElementById('menu-toggle').checked = false;">Testimonios</a></li>
+            <li><a href="#footer" onclick="document.getElementById('menu-toggle').checked = false;">Contáctanos</a></li>
+        </ul>
+        </nav>
     </header>
-
+    
+    
 
     <!-- TUTORIAS ESPECIALIZADAS -->
-    <section class="tutorias-section">
+    <section id="tutorias-section">
       <h2>Descubre nuestras tutorías especializadas</h2>
       <p>
         En nuestras tutorías, nos adaptamos a tus necesidades individuales.
@@ -55,11 +59,8 @@
       />
     </section>
 
-
-
-
-<!-- RECURSOS EDUCATIVOS AVANZADOS -->
-    <section class="recursos-section">
+    <!-- RECURSOS EDUCATIVOS AVANZADOS -->
+    <section id="recursos-section">
       <h2>Recursos Educativos Avanzados</h2>
       <p>
         Explora una variedad de recursos diseñados para potenciar tu aprendizaje
@@ -117,86 +118,108 @@
       </div>
     </section>
 
+    <!-- APRENDIZAJE PERSONALIZADO -->
+    <section id="programas-section">
+      <h2>
+        ¡Conoce a nuestros alumnos de distintas partes del mundo que se
+        volvieron expertos gracias a nuestras clases!
+      </h2>
 
-
-
-<!-- APRENDIZAJE PERSONALIZADO -->
-<section class="programas-section">
-    
-    <h2>¡Conoce a nuestros alumnos de distintas partes del mundo que se volvieron expertos gracias a nuestras clases!</h2>
-
-    <div class="card-container">
+      <div class="card-container">
         <div class="card">
-            <div class="face front">
-                <img src="imagenes/Chica Adolescente.jpg" alt="">
-                <h3>Marcos</h3>
+          <div class="face front">
+            <img src="imagenes/Chica Adolescente.jpg" alt="" />
+            <h3>Marcos</h3>
+          </div>
+          <div class="face back">
+            <h3>Argentina</h3>
+            <p>
+              “Gracias a XYZ Corp, he podido personalizar mi aprendizaje y
+              avanzar a mi propio ritmo.”
+            </p>
+            <div class="link">
+              <a href="#">↩</a>
             </div>
-            <div class="face back">
-                <h3>Argentina</h3>
-                <p>“Gracias a XYZ Corp, he podido personalizar mi aprendizaje y avanzar a mi propio ritmo.”
-                </p>
-                <div class="link">
-                    <a href="#">↩</a>
-                </div>
-            </div>
+          </div>
         </div>
 
         <div class="card">
-            <div class="face front">
-                <img src="imagenes/Joven Adolescente.jpg" alt="">
-                <h3>Sophia</h3>
+          <div class="face front">
+            <img src="imagenes/Joven Adolescente.jpg" alt="" />
+            <h3>Sophia</h3>
+          </div>
+          <div class="face back">
+            <h3>España</h3>
+            <p>
+              “Con XYZ Corp, he encontrado una manera efectiva y personalizada
+              de aprender.”
+            </p>
+            <div class="link">
+              <a href="#">↩</a>
             </div>
-            <div class="face back">
-                <h3>España</h3>
-                <p>“Con XYZ Corp, he encontrado una manera efectiva y personalizada de aprender.”</p>
-                <div class="link">
-                    <a href="#">↩</a>
-                </div>
-            </div>
+          </div>
         </div>
 
         <div class="card">
-            <div class="face front">
-                <img src="imagenes/Señora.jpg" alt="">
-                <h3>Monica</h3>
+          <div class="face front">
+            <img src="imagenes/Señora.jpg" alt="" />
+            <h3>Monica</h3>
+          </div>
+          <div class="face back">
+            <h3>Perú</h3>
+            <p>
+              “A mis 55 años XYZ Corp me ha brindado acceso a recursos
+              educativos que nunca imaginé tener.”
+            </p>
+            <div class="link">
+              <a href="#">↩</a>
             </div>
-            <div class="face back">
-                <h3>Perú</h3>
-                <p>“A mis 55 años XYZ Corp me ha brindado acceso a recursos educativos que nunca imaginé tener.”</p>
-                <div class="link">
-                    <a href="#">↩</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <h2>“¡Ellos ya tuvieron éxito… ¿y tú, qué estás esperando?!”</h2>
+      <h2>“¡Ellos ya tuvieron éxito… ¿y tú, qué estás esperando?!”</h2>
+    </section>
 
-</section>
-
-
-<footer class="footer">
-  <div class="footer-content">
-      <div class="section">
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="footer-content">
+        <div class="section">
           <h2>Explora</h2>
           <p><a href="https://example.com/ui-design">UI design</a></p>
           <p><a href="https://example.com/ux-design">UX design</a></p>
           <p><a href="https://example.com/wireframing">Wireframing</a></p>
           <p><a href="https://example.com/diagramming">Diagramming</a></p>
           <p><a href="https://example.com/brainstorming">Brainstorming</a></p>
-          <p><a href="https://example.com/online-whiteboard">Online whiteboard</a></p>
-          <p><a href="https://example.com/team-collaboration">Team collaboration</a></p>
-      </div>
-      <div class="section">
+          <p>
+            <a href="https://example.com/online-whiteboard"
+              >Online whiteboard</a
+            >
+          </p>
+          <p>
+            <a href="https://example.com/team-collaboration"
+              >Team collaboration</a
+            >
+          </p>
+        </div>
+        <div class="section">
           <h2>Design</h2>
           <p><a href="https://example.com/prototyping">Prototyping</a></p>
-          <p><a href="https://example.com/development-features">Development features</a></p>
+          <p>
+            <a href="https://example.com/development-features"
+              >Development features</a
+            >
+          </p>
           <p><a href="https://example.com/design-systems">Design systems</a></p>
-          <p><a href="https://example.com/collaboration-features">Collaboration features</a></p>
+          <p>
+            <a href="https://example.com/collaboration-features"
+              >Collaboration features</a
+            >
+          </p>
           <p><a href="https://example.com/design-process">Design process</a></p>
           <p><a href="https://example.com/figjam">FigJam</a></p>
-      </div>
-      <div class="section">
+        </div>
+        <div class="section">
           <h2>Resources</h2>
           <p><a href="https://example.com/blog">Blog</a></p>
           <p><a href="https://example.com/best-practices">Best practices</a></p>
@@ -204,17 +227,29 @@
           <p><a href="https://example.com/color-wheel">Color wheel</a></p>
           <p><a href="https://example.com/support">Support</a></p>
           <p><a href="https://example.com/developers">Developers</a></p>
-          <p><a href="https://example.com/resource-library">Resource library</a></p>
+          <p>
+            <a href="https://example.com/resource-library">Resource library</a>
+          </p>
+        </div>
       </div>
-  </div>
-  <div class="social-media">
-      <a href="https://twitter.com" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-  </div>
-</footer>
-
+      <div class="social-media">
+        <a href="https://twitter.com" class="social-icon" aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://instagram.com"
+          class="social-icon"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://youtube.com" class="social-icon" aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
 
     <!-- COPYRIGHT  -->
     <footer>
@@ -222,5 +257,16 @@
         <p>&copy; XYZ CORP</p>
       </div>
     </footer>
+    <script>
+      // Opcional: cerrar el menú al hacer clic fuera del mismo
+      document.addEventListener('click', function(event) {
+        const checkbox = document.getElementById('menu-toggle');
+        const menu = document.querySelector('nav');
+
+        if (checkbox.checked && !menu.contains(event.target) && event.target.id !== 'menu-toggle') {
+          checkbox.checked = false;
+        }
+      });
+    </script>
   </body>
 </html>
